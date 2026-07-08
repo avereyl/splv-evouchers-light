@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eVoucherA4Signature" pageWidth="555" pageHeight="110" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="077ae7e5-4e12-42a4-9046-1ff8a5ec1989">
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="VOUCHER_RESPONSIBLE_NAME" class="java.lang.String"/>
+	<parameter name="VOUCHER_RESPONSIBLE_SIGNATURE_SVG_DATA" class="java.lang.String"/>
+	<parameter name="VOUCHER_RESPONSIBLE_TITLE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="110">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="300" y="21" width="150" height="17" uuid="80673918-8a7a-4346-bd62-e7b064fec240">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Roboto" size="11" isBold="false"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{VOUCHER_RESPONSIBLE_TITLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="38" width="150" height="17" uuid="b8945d45-637f-4b2a-9e75-6c646ac11f8e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Roboto" size="11" isBold="false"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{VOUCHER_RESPONSIBLE_NAME}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape">
+				<reportElement isPrintRepeatedValues="false" x="300" y="58" width="200" height="52" isPrintWhenDetailOverflows="true" uuid="c8eba595-08d3-45a8-9df8-06f11982ec8d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.renderers.SimpleRenderToImageAwareDataRenderer.getInstance($P{VOUCHER_RESPONSIBLE_SIGNATURE_SVG_DATA}.getBytes())]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

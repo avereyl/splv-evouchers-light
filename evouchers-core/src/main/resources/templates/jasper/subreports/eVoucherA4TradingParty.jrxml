@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eVoucherA4TradingParty" pageWidth="230" pageHeight="170" whenNoDataType="AllSectionsNoDetail" columnWidth="230" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="077ae7e5-4e12-42a4-9046-1ff8a5ec1989">
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="false"/>
+	<parameter name="SUBREPORT_DIRECTORY" class="java.lang.String"/>
+	<parameter name="TRADING_PARTY_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="TRADING_PARTY_LINE_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="TRADING_PARTY_TITLE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="title" class="java.lang.String"/>
+	<detail>
+		<band height="170" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="50" width="231" height="120" backcolor="#FFFFFF" uuid="dfaf1351-ec8b-4392-b61e-77380776600d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement key="line-1" x="14" y="50" width="202" height="1" uuid="2d069f16-c2e3-4349-907f-e9e8748ae694">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-2" x="0" y="64" width="1" height="92" uuid="68322a91-61f1-4d2d-bebf-322e6d5f5733">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="14" y="169" width="202" height="1" uuid="93d9894a-b6ea-4324-ba76-eeaed77fb9a7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-2" x="230" y="64" width="1" height="92" uuid="3b8820fe-0928-45c2-bcd4-39ff03bd11a5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="230" height="50" uuid="e1386ae9-cd83-42d8-afc9-b61e7e4ae95f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="14" isBold="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRADING_PARTY_TITLE}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="10" y="53" width="210" height="115" backcolor="#FFFFFF" uuid="4aeb4697-c4d2-458a-9a03-23333852cc0a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{TRADING_PARTY_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{TRADING_PARTY_LINE_SUBREPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "description": "Application specific properties"
+    },
+    {
+      "name": "app.signing",
+      "description": "Application properties for signing"
+    },
+    {
+      "name": "app.voucher",
+      "type": "fr.splv.evouchers.config.properties.VoucherProperties",
+      "sourceType": "fr.splv.evouchers.config.properties.VoucherProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.signing.keystore.path",
+      "type": "java.lang.String",
+      "description": "Path of the keystore"
+    },
+    {
+      "name": "app.signing.keystore.password",
+      "type": "java.lang.String",
+      "description": "Password of the keystore"
+    },
+    {
+      "name": "app.signing.keystore.default-kid",
+      "type": "java.lang.String",
+      "description": "Default key identifier"
+    },
+    {
+      "name": "app.voucher.metadata-current-version",
+      "type": "java.lang.Integer",
+      "description": "Current version number for metadata. Version used for voucher generation.",
+      "defaultValue": 0
+    },
+    {
+      "name": "app.voucher.metadata-version",
+      "type": "java.lang.Integer",
+      "description": "Version number for metadata. Prevent voucher generation when metadata have changed.",
+      "defaultValue": 0
+    },
+    {
+      "name": "app.voucher.facturX.address",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.facturX.address'"
+    },
+    {
+      "name": "app.voucher.responsible.name",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.responsible.name'"
+    },
+    {
+      "name": "app.voucher.responsible.signature-path",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.responsible.signature-path'"
+    },
+    {
+      "name": "app.voucher.facturX.name",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.facturX.name'"
+    },
+    {
+      "name": "app.voucher.facturX.city",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.facturX.city'"
+    },
+    {
+      "name": "app.voucher.facturX.country-code",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.facturX.country-code'"
+    },
+    {
+      "name": "app.voucher.facturX.zip-code",
+      "type": "java.lang.String",
+      "description": "A description for 'app.voucher.facturX.zip-code'"
+    }
+  ],
+  "hints": []
+}

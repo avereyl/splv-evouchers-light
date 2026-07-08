@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eVoucherA4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82325a7b-09e6-4b8e-9fe4-287551d19f18">
+	<property name="net.sf.jasperreports.export.pdf.tagged" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Empty Dataset" uuid="e6c499a4-4bff-4694-9f09-f1ae714493f4"/>
+	<parameter name="SUBREPORT_DIRECTORY" class="java.lang.String">
+		<parameterDescription><![CDATA[Directory where finding subreports]]></parameterDescription>
+	</parameter>
+	<parameter name="EVOUCHER_ASSOCIATION_LOGO_SVG_DATA" class="java.lang.String"/>
+	<parameter name="EVOUCHER_RESPONSIBLE_SIGNATURE_SVG_DATA" class="java.lang.String"/>
+	<parameter name="EVOUCHER_QRCODE_SVG_DATA" class="java.lang.String"/>
+	<parameter name="EVOUCHER_RESPONSIBLE_TITLE" class="java.lang.String"/>
+	<parameter name="EVOUCHER_RESPONSIBLE_NAME" class="java.lang.String"/>
+	<parameter name="EVOUCHER_REFERENCE_DATASOURCE" class="net.sf.jasperreports.engine.JRRewindableDataSource"/>
+	<parameter name="EVOUCHER_AMOUNT_DATASOURCE" class="net.sf.jasperreports.engine.JRRewindableDataSource"/>
+	<parameter name="EVOUCHER_RECIPIENT_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="EVOUCHER_DONOR_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="EVOUCHER_HEADER_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_REFERENCE_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_TRADING_PARTIES_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_TRADING_PARTY_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_TRADING_PARTY_LINE_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_AMOUNT_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_SIGNATURE_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_FOOTER_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="155" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport isUsingCache="true" overflowType="Stretch">
+				<reportElement x="0" y="30" width="555" height="120" uuid="8ced786f-9cac-4efa-9857-1e5d8d6e5c8c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_ASSOCIATION_LOGO_SVG_DATA">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_ASSOCIATION_LOGO_SVG_DATA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_HEADER_SUBREPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<detail>
+		<band height="430" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport isUsingCache="true">
+				<reportElement x="0" y="0" width="555" height="40" uuid="515391b0-99c3-4d5d-b4ef-aa12ed36d8e3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{EVOUCHER_REFERENCE_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_REFERENCE_SUBREPORT}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement x="0" y="60" width="555" height="170" uuid="afdcee7c-63bb-4439-aac9-bf4f19fc808d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_RECIPIENT_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_RECIPIENT_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_DONOR_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_DONOR_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_TRADING_PARTY_SUBREPORT">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_SUBREPORT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_TRADING_PARTY_LINE_SUBREPORT">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_LINE_SUBREPORT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_TRADING_PARTIES_SUBREPORT}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true" overflowType="NoStretch">
+				<reportElement x="0" y="245" width="555" height="60" uuid="c59cc11c-8c83-4bfb-8464-2b62175aa27d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{EVOUCHER_AMOUNT_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_AMOUNT_SUBREPORT}]]></subreportExpression>
+			</subreport>
+			<subreport overflowType="NoStretch">
+				<reportElement x="0" y="310" width="555" height="115" uuid="cb779066-ce13-4a8d-a1be-fc6a94c93af9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VOUCHER_RESPONSIBLE_NAME">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_RESPONSIBLE_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VOUCHER_RESPONSIBLE_SIGNATURE_SVG_DATA">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_RESPONSIBLE_SIGNATURE_SVG_DATA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VOUCHER_RESPONSIBLE_TITLE">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_RESPONSIBLE_TITLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_SIGNATURE_SUBREPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="158" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="155" uuid="68a7cf41-db89-4470-ba8c-561a1b32619f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIRECTORY">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIRECTORY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVOUCHER_QRCODE_SVG_DATA">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_QRCODE_SVG_DATA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_FOOTER_SUBREPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageFooter>
+</jasperReport>

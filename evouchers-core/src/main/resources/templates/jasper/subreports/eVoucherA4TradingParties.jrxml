@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eVoucherA4TradingParties" pageWidth="555" pageHeight="170" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="077ae7e5-4e12-42a4-9046-1ff8a5ec1989">
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<parameter name="SUBREPORT_DIRECTORY" class="java.lang.String"/>
+	<parameter name="EVOUCHER_RECIPIENT_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="EVOUCHER_DONOR_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="EVOUCHER_TRADING_PARTY_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="EVOUCHER_TRADING_PARTY_LINE_SUBREPORT" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="170">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="37" y="0" width="230" height="170" uuid="f535257c-e670-4d7f-ba50-0ae5a6860d58">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_LINE_SUBREPORT">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_LINE_SUBREPORT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_RECIPIENT_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_TITLE">
+					<subreportParameterExpression><![CDATA[$R{voucher.association}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_SUBREPORT}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="288" y="0" width="230" height="170" uuid="f774f1eb-8b62-4543-85ac-d8f87f236e27">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_TEMPLATES">
+					<subreportParameterExpression><![CDATA[$P{REPORT_TEMPLATES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_LINE_SUBREPORT">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_LINE_SUBREPORT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{EVOUCHER_DONOR_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TRADING_PARTY_TITLE">
+					<subreportParameterExpression><![CDATA[$R{voucher.donor}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{EVOUCHER_TRADING_PARTY_SUBREPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

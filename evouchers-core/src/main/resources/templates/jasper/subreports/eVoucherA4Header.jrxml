@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eVoucherA4Header" pageWidth="555" pageHeight="120" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="077ae7e5-4e12-42a4-9046-1ff8a5ec1989">
+	<parameter name="EVOUCHER_ASSOCIATION_LOGO_SVG_DATA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="115" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="135" y="27" width="286" height="30" uuid="81d82d4a-65bd-41a3-8cc4-ad5392acac40">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{voucher.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="84" width="384" height="24" uuid="af172e15-2905-46f9-9907-a4c6974e9275">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Roboto" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{voucher.splv}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="37" y="113" width="481" height="1" backcolor="#000000" uuid="e9f1abc0-e0a6-4fc6-b160-21d91e6763fc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<image hAlign="Right">
+				<reportElement stretchType="RelativeToBandHeight" x="438" y="0" width="80" height="108" uuid="3b0b7246-d42d-463f-9489-faeb4a151ec5">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[net.sf.jasperreports.renderers.SimpleRenderToImageAwareDataRenderer.getInstance($P{EVOUCHER_ASSOCIATION_LOGO_SVG_DATA}.getBytes())]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
