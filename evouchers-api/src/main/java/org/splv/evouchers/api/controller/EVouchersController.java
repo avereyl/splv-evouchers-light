@@ -46,7 +46,7 @@ public class EVouchersController {
     /**
      * Assess the validity of the signature
      * @param validationBean The signature to validate.
-     * @return REsult of validation.
+     * @return Result of validation.
      */
     @GetMapping(value = "/v1.0/evouchers/validation")
     public ResponseEntity<EVoucherValidationResultObject> getValidity(@Valid @RequestBody EVoucherValidationBean validationBean) {
@@ -54,8 +54,7 @@ public class EVouchersController {
     	 HttpStatus status = switch (validationResult.getValue()) {
     		case VALID, INVALID -> HttpStatus.OK;
     		case UNSUPPORTED -> HttpStatus.BAD_REQUEST;
-    		case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
-    		default -> HttpStatus.INTERNAL_SERVER_ERROR;
+             default -> HttpStatus.INTERNAL_SERVER_ERROR;
     	};
     	return new ResponseEntity<>(validationResult, status);
     }

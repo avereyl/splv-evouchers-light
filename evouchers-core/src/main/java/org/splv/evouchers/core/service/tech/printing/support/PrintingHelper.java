@@ -7,6 +7,7 @@ import java.time.format.FormatStyle;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -160,8 +161,9 @@ public class PrintingHelper {
 	
 	public static List<String> split4print(final String lines, int maxLines) {
 //		@formatter:off
-		return Arrays.asList(lines.split("\n"))
+		return Optional.ofNullable(lines)
 				.stream()
+				.flatMap(l -> Arrays.stream(l.split("\n")))
 				.limit(maxLines)
 				.map(s -> StringUtils.abbreviate(s, Constants.PRINTED_NAME_LINE_MAXLENGTH-1))
 				.toList();

@@ -1,0 +1,49 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.splv</groupId>
+    <artifactId>evouchers-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.7</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <java.version>25</java.version>
+
+        <icu4j.version>78.2</icu4j.version>
+        <zxing.version>3.5.4</zxing.version>
+        <nimbus-jose-jwt.version>10.8</nimbus-jose-jwt.version>
+        <jasperreports.version>7.0.3</jasperreports.version>
+        <apache.batik.version>1.19</apache.batik.version>
+        <apache.fop.version>2.11</apache.fop.version>
+        <xmpcore.version>6.1.11</xmpcore.version>
+        <jasypt.version>4.0.4</jasypt.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.splv</groupId>
+                <artifactId>evouchers-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.splv</groupId>
+                <artifactId>evouchers-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.splv</groupId>
+                <artifactId>evouchers-fonts</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
